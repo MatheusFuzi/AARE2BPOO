@@ -120,7 +120,7 @@ public class FirstScreen extends javax.swing.JFrame {
     private void BtnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnExitActionPerformed
         System.exit(0);
     }//GEN-LAST:event_BtnExitActionPerformed
-
+    //Chama as telas e passa as informações do cliente
     private void BtnPlaceOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnPlaceOrderActionPerformed
         if((TxtName.getText().isEmpty()) || (TxtCpf.getText().isEmpty()) ){
             JOptionPane.showMessageDialog(null,"Preencha todos os campos para prosseguir!","Atenção",JOptionPane.WARNING_MESSAGE);

@@ -9,7 +9,9 @@ package br.com.unipar.poo.AARE2.Screen;
 import javax.swing.JOptionPane;
 import br.com.unipar.poo.AARE2.Controller.*;
 import java.awt.Dimension;
+import java.awt.Frame;
 import java.util.ArrayList;
+import javax.swing.JFrame;
 
 /**
  *
@@ -22,12 +24,14 @@ public class OrderScreen extends javax.swing.JFrame {
     String Size;
     Pizza Pizza1 = new Pizza();
     ArrayList<String> flavor = new ArrayList();
+    JFrame Frame;
     
     /**
      * 
      * Creates new form OrderScreen
      */
     public OrderScreen() {
+        this.Frame = new JFrame();
         initComponents();
     }
     public void ExportClient(Client Client1){
@@ -47,6 +51,11 @@ public class OrderScreen extends javax.swing.JFrame {
         buttonGroup1 = new javax.swing.ButtonGroup();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
         PnSize = new javax.swing.JPanel();
         BtnGiantSize = new javax.swing.JButton();
         Lbltitle = new javax.swing.JLabel();
@@ -156,19 +165,14 @@ public class OrderScreen extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         LblCoke = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
         LblpriceCoke = new javax.swing.JLabel();
         LblHeinekenprice = new javax.swing.JLabel();
         LblHeineken = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
         LblPratzPrice = new javax.swing.JLabel();
         LblPratz = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
         LblWaterprice = new javax.swing.JLabel();
         LblWater = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
-        jLabel27 = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
         BtnokDrink = new javax.swing.JButton();
         BtnCancelDrink = new javax.swing.JButton();
@@ -186,10 +190,21 @@ public class OrderScreen extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
+        jLabel15.setText("Coca-Cola 2 Lt");
+
+        jLabel19.setText("Cerveja Heineken 330ml");
+
+        jLabel22.setText("Suco Pratz 900ml");
+
+        jLabel25.setText("Água Mineral 600ml");
+
+        jLabel27.setText("Bebida");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBounds(new java.awt.Rectangle(0, 0, 520, 365));
-        setMinimumSize(new java.awt.Dimension(530, 365));
+        setBounds(new java.awt.Rectangle(0, 0, 630, 600));
+        setMinimumSize(new java.awt.Dimension(630, 600));
         setPreferredSize(new java.awt.Dimension(487, 370));
+        setResizable(false);
         setSize(new java.awt.Dimension(487, 370));
         addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentShown(java.awt.event.ComponentEvent evt) {
@@ -502,7 +517,7 @@ public class OrderScreen extends javax.swing.JFrame {
         PnFlavors.add(LblPlus1);
         LblPlus1.setBounds(290, 220, 70, 16);
 
-        PnBorder.setMinimumSize(new java.awt.Dimension(389, 288));
+        PnBorder.setMinimumSize(new java.awt.Dimension(389, 292));
         PnBorder.setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -591,7 +606,7 @@ public class OrderScreen extends javax.swing.JFrame {
             }
         });
         PnBorder.add(BtnCancelBorder);
-        BtnCancelBorder.setBounds(240, 210, 76, 22);
+        BtnCancelBorder.setBounds(170, 210, 76, 22);
 
         BtnViewOrder.setText("Visualizar pedido");
         BtnViewOrder.addActionListener(new java.awt.event.ActionListener() {
@@ -600,7 +615,7 @@ public class OrderScreen extends javax.swing.JFrame {
             }
         });
         PnBorder.add(BtnViewOrder);
-        BtnViewOrder.setBounds(330, 210, 150, 22);
+        BtnViewOrder.setBounds(260, 210, 170, 22);
 
         PnOrder.setAutoscrolls(true);
         PnOrder.setMinimumSize(new java.awt.Dimension(630, 600));
@@ -838,44 +853,24 @@ public class OrderScreen extends javax.swing.JFrame {
         jLabel13.setBounds(120, 130, 140, 16);
         PnBebidas.add(LblCoke);
         LblCoke.setBounds(350, 40, 70, 20);
-
-        jLabel15.setText("Coca-Cola 2 Lt");
-        PnBebidas.add(jLabel15);
-        jLabel15.setBounds(50, 380, 110, 16);
         PnBebidas.add(LblpriceCoke);
         LblpriceCoke.setBounds(410, 40, 60, 20);
         PnBebidas.add(LblHeinekenprice);
         LblHeinekenprice.setBounds(410, 70, 80, 20);
         PnBebidas.add(LblHeineken);
         LblHeineken.setBounds(350, 70, 60, 20);
-
-        jLabel19.setText("Cerveja Heineken 330ml");
-        PnBebidas.add(jLabel19);
-        jLabel19.setBounds(50, 410, 160, 16);
         PnBebidas.add(LblPratzPrice);
         LblPratzPrice.setBounds(410, 100, 80, 20);
         PnBebidas.add(LblPratz);
         LblPratz.setBounds(350, 100, 60, 20);
-
-        jLabel22.setText("Suco Pratz 900ml");
-        PnBebidas.add(jLabel22);
-        jLabel22.setBounds(50, 440, 150, 16);
         PnBebidas.add(LblWaterprice);
         LblWaterprice.setBounds(410, 130, 90, 20);
         PnBebidas.add(LblWater);
         LblWater.setBounds(350, 130, 70, 20);
 
-        jLabel25.setText("Água Mineral 600ml");
-        PnBebidas.add(jLabel25);
-        jLabel25.setBounds(50, 470, 170, 16);
-
         jLabel26.setText("Valor");
         PnBebidas.add(jLabel26);
         jLabel26.setBounds(410, 10, 60, 16);
-
-        jLabel27.setText("Bebida");
-        PnBebidas.add(jLabel27);
-        jLabel27.setBounds(50, 350, 110, 16);
 
         jLabel28.setText("Qtd");
         PnBebidas.add(jLabel28);
@@ -905,43 +900,43 @@ public class OrderScreen extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(PnSize, javax.swing.GroupLayout.DEFAULT_SIZE, 630, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(PnFlavors, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(PnFlavors, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 630, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 80, Short.MAX_VALUE)
+                    .addComponent(PnBorder, javax.swing.GroupLayout.DEFAULT_SIZE, 469, Short.MAX_VALUE)
+                    .addGap(0, 81, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(PnBorder, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(PnOrder, javax.swing.GroupLayout.DEFAULT_SIZE, 630, Short.MAX_VALUE)
                     .addGap(0, 0, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(PnOrder, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(PnBebidas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 76, Short.MAX_VALUE)
+                    .addComponent(PnBebidas, javax.swing.GroupLayout.DEFAULT_SIZE, 477, Short.MAX_VALUE)
+                    .addGap(0, 77, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PnSize, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(PnSize, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(PnFlavors, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(PnFlavors, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 104, Short.MAX_VALUE)
+                    .addComponent(PnBorder, javax.swing.GroupLayout.DEFAULT_SIZE, 392, Short.MAX_VALUE)
+                    .addGap(0, 104, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(PnBorder, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(PnOrder, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
                     .addGap(0, 0, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(PnOrder, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(PnBebidas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 57, Short.MAX_VALUE)
+                    .addComponent(PnBebidas, javax.swing.GroupLayout.DEFAULT_SIZE, 484, Short.MAX_VALUE)
+                    .addGap(0, 59, Short.MAX_VALUE)))
         );
 
         pack();
@@ -1082,7 +1077,7 @@ public class OrderScreen extends javax.swing.JFrame {
    
     private void BtnSelectFlavorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSelectFlavorActionPerformed
 
-        if (Pizza1.getSize().equals("Broto") && (RGBorder.isSelected())){
+        if ((Pizza1.getSize().equals("Broto") && (RGBorder.isSelected())) || (RGNoBorder.isSelected())){
             PnBebidas.setVisible(true);
             PnFlavors.setVisible(false);
             LblBorderPriceOrderB.setText("");
@@ -1291,7 +1286,7 @@ public class OrderScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnCancelBorderActionPerformed
 
     private void ConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfirmarActionPerformed
-        JOptionPane.showMessageDialog(null, "Obrigado por utilizar nossos serivços!", "Obrigado!", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null, "Obrigado por utilizar nossos serviços!", "Obrigado!", JOptionPane.INFORMATION_MESSAGE);
         this.dispose();
     }//GEN-LAST:event_ConfirmarActionPerformed
 
@@ -1323,7 +1318,6 @@ public class OrderScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnCokeAddActionPerformed
 
     private void BtnHeinekenAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnHeinekenAddActionPerformed
-
         h = h + 1;
         priceheineken = priceheineken + 6.50;
         LblHeineken.setText(String.valueOf(h));
@@ -1331,7 +1325,6 @@ public class OrderScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnHeinekenAddActionPerformed
 
     private void btnPratzActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPratzActionPerformed
-
         p = p + 1;
         pricepratz = pricepratz + 12.50;
         LblPratz.setText(String.valueOf(p));
@@ -1339,7 +1332,6 @@ public class OrderScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_btnPratzActionPerformed
 
     private void BtnAguaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAguaActionPerformed
-
         w = w + 1;
         pricewater = pricewater + 3.50;
         LblWater.setText(String.valueOf(w));
@@ -1356,7 +1348,7 @@ public class OrderScreen extends javax.swing.JFrame {
         LblCokeMod.setText(c + " Unidades ........ " + jLabel15.getText());
         LblHeinekenmod.setText(h + " Unidades ........ " +jLabel19.getText());
         Lblpratzmod.setText(p + " Unidades ........ " + jLabel22.getText());
-        LblWaterMod.setText(c + " Unidades ........ " + jLabel25.getText());
+        LblWaterMod.setText(w + " Unidades ........ " + jLabel25.getText());
     }//GEN-LAST:event_BtnokDrinkActionPerformed
 
     private void BtnCancelDrinkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCancelDrinkActionPerformed
